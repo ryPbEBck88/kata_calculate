@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -70,16 +69,16 @@ func system_of_calculation(s string) (int, string) {
 
 func length_not_equal_to_three(n int) {
 	if n < 3 {
-		panic(errors.New("Строка не является математической операцией."))
+		panic("Строка не является математической операцией.")
 	} else if n > 3 {
-		panic(errors.New("Формат математической операции не удовлетворяет заданию — два операнда и один оператор (+, -, /, *)."))
+		panic("Формат математической операции не удовлетворяет заданию — два операнда и один оператор (+, -, /, *).")
 	}
 }
 
 func main() {
-	negativeRoman := errors.New("В римской системе нет отрицательных чисел")
-	differentSystemsErr := errors.New("Используются одновременно разные системы счисления.")
-	numberLimitErr := errors.New("Введите, пожалуйста, арабские(от 1 до 10) или римские(от I до X) цифры")
+	negativeRoman := "В римской системе нет отрицательных чисел"
+	differentSystemsErr := "Используются одновременно разные системы счисления."
+	numberLimitErr := "Введите, пожалуйста, арабские(от 1 до 10) или римские(от I до X) цифры"
 
 	var firstNum, secondNum int
 	var firstNumSystem, secondNumSystem string
